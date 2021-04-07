@@ -11,46 +11,61 @@ describe("Test roman numerals", () => {
     ];
 
     basicConversion.forEach(({ input, expected }) => {
-      test("Verify conversion to '" + expected + "'", () => {
+      test("Verify conversion of '" + input + "'to '" + expected + "'", () => {
         expect(getRomanNumeral(input)).toBe(expected);
       });
     });
   });
 
   describe("Conversion with multiple roman numerals", () => {
-    const toTest = [
+    const multipleNumeralConversion = [
       {
         input: "237",
         expected: "CCXXXVII",
       },
       {
+        input: "189",
+        expected: "CLXXXIX",
+      },
+      {
         input: "255",
         expected: "CCLV",
       },
+    ];
+
+    multipleNumeralConversion.forEach(({ input, expected }) => {
+      test("Verify conversion of '" + input + "'to '" + expected + "'", () => {
+        expect(getRomanNumeral(input)).toBe(expected);
+      });
+    });
+  });
+
+  describe("Conversion with edge cases", () => {
+    const edgeCases = [
       {
         input: "1",
         expected: "I",
       },
       {
         input: "4",
-        expected: "IIII",
+        expected: "IV",
       },
       {
         input: "9",
-        expected: "VIIII",
+        expected: "IX",
       },
       {
         input: "49",
-        expected: "XXXXVIIII",
+        expected: "XLIX",
       },
       {
         input: "99",
-        expected: "LXXXXVIIII",
+        expected: "XCIX",
       },
     ];
 
-    toTest.forEach(({ input, expected }) => {
-      test("Verify conversion to '" + expected + "'", () => {
+    edgeCases.forEach(({ input, expected }) => {
+      test("Verify conversion of '" + input + "'to '" + expected + "'", () => {
         expect(getRomanNumeral(input)).toBe(expected);
       });
     });
