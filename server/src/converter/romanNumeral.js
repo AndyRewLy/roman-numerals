@@ -8,7 +8,7 @@ const romanNumeralConfig = [
 
 /**
  * Converts a number input into a roman numeral string
- * @param {String} input Number to convert to a roman numeral
+ * @param {*} input Number to convert to a roman numeral
  */
 const getRomanNumeral = (numInput) => {
   const { result } = romanNumeralConfig.reduce(
