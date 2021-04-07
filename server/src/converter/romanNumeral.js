@@ -1,4 +1,4 @@
-const romanNumeralWithValue = [
+const romanNumeralConfig = [
   { romanNumeral: "C", value: 100, threshold: 90, prefix: "X" },
   { romanNumeral: "L", value: 50, threshold: 40, prefix: "X" },
   { romanNumeral: "X", value: 10, threshold: 9, prefix: "I" },
@@ -11,12 +11,12 @@ const romanNumeralWithValue = [
  * @param {String} input Number to convert to a roman numeral
  */
 const getRomanNumeral = (numInput) => {
-  const { result } = romanNumeralWithValue.reduce(
-    ({ result, input }, romanNumeralConfig) =>
+  const { result } = romanNumeralConfig.reduce(
+    ({ result, input }, config) =>
       getRomanNumeralPortion({
         input,
         result,
-        ...romanNumeralConfig,
+        ...config,
       }),
     { result: "", input: numInput }
   );
@@ -24,6 +24,13 @@ const getRomanNumeral = (numInput) => {
   return result;
 };
 
+/**
+ * Takes the input as well as the current configuration and returns the roman numeral portion.
+ * i.e  Given the romanNumeral configuration corresponding to 'L' and an input of 39
+ *    - returns XXXIX
+ * @param {*} config - Configuration containing the
+ * @returns the current resulting string of the opration as well as the curent input left to parse
+ */
 const getRomanNumeralPortion = ({
   romanNumeral,
   input,
@@ -35,11 +42,13 @@ const getRomanNumeralPortion = ({
   let currentInput = input;
   let currentResult = result;
 
+  // While we can still divide the currentInput with the value, add it's corresponding romanNumeral
   while (currentInput / value >= 1) {
     currentInput -= value;
     currentResult += romanNumeral;
   }
 
+  // Determine if we need to add the subtractive notation for the current input
   if (currentInput / threshold >= 1) {
     currentInput -= threshold;
     currentResult += prefix + romanNumeral;
