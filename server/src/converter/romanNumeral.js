@@ -1,3 +1,9 @@
+/**
+ * romanNumeral - The character that represents the roman numeral
+ * value - the decimal value of the roman numeral character
+ * threshold - the threshold where the roman numeral can appear
+ * prefix - the roman numeral to display when using subtractive notation
+ */
 const romanNumeralConfig = [
   { romanNumeral: "C", value: 100, threshold: 90, prefix: "X" },
   { romanNumeral: "L", value: 50, threshold: 40, prefix: "X" },
@@ -28,7 +34,7 @@ const getRomanNumeral = (numInput) => {
  * Takes the input as well as the current configuration and returns the roman numeral portion.
  * i.e  Given the romanNumeral configuration corresponding to 'L' and an input of 39
  *    - returns XXXIX
- * @param {*} config - Configuration containing the
+ * @param {*} config
  * @returns the current resulting string of the opration as well as the curent input left to parse
  */
 const getRomanNumeralPortion = ({
