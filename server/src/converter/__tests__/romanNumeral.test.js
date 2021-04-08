@@ -40,7 +40,7 @@ describe("Test roman numerals", () => {
     });
   });
 
-  describe("Conversion with edge cases", () => {
+  describe("Conversion with edge cases for subtractive notation", () => {
     const edgeCases = [
       {
         input: "1",
