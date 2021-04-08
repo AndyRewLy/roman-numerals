@@ -1,0 +1,688 @@
+{
+	"info": {
+		"_postman_id": "94ff531d-61bc-4c4c-8287-b730d1a9a4f1",
+		"name": "Roman Numerals Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Positive Test Cases",
+			"item": [
+				{
+					"name": "Basic Test - Convert 1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response body matches\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    const body = pm.response.json();\r",
+									"\r",
+									"    pm.expect(body.input).to.equal(\"1\");\r",
+									"    pm.expect(body.output).to.equal(\"I\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/romannumeral?query=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"romannumeral"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Basic Test - Convert 4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response body matches\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    const body = pm.response.json();\r",
+									"\r",
+									"    pm.expect(body.input).to.equal(\"4\");\r",
+									"    pm.expect(body.output).to.equal(\"IV\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/romannumeral?query=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"romannumeral"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Basic Test - Convert 5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response body matches\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    const body = pm.response.json();\r",
+									"\r",
+									"    pm.expect(body.input).to.equal(\"5\");\r",
+									"    pm.expect(body.output).to.equal(\"V\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/romannumeral?query=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"romannumeral"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Basic Test - Convert 9",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response body matches\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    const body = pm.response.json();\r",
+									"\r",
+									"    pm.expect(body.input).to.equal(\"9\");\r",
+									"    pm.expect(body.output).to.equal(\"IX\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/romannumeral?query=9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"romannumeral"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Basic Test - Convert 10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response body matches\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    const body = pm.response.json();\r",
+									"\r",
+									"    pm.expect(body.input).to.equal(\"10\");\r",
+									"    pm.expect(body.output).to.equal(\"X\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/romannumeral?query=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"romannumeral"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Basic Test - Convert 40",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response body matches\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    const body = pm.response.json();\r",
+									"\r",
+									"    pm.expect(body.input).to.equal(\"40\");\r",
+									"    pm.expect(body.output).to.equal(\"XL\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/romannumeral?query=40",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"romannumeral"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "40"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Basic Test - Convert 50",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response body matches\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    const body = pm.response.json();\r",
+									"\r",
+									"    pm.expect(body.input).to.equal(\"50\");\r",
+									"    pm.expect(body.output).to.equal(\"L\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/romannumeral?query=50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"romannumeral"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Basic Test - Convert 90",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response body matches\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    const body = pm.response.json();\r",
+									"\r",
+									"    pm.expect(body.input).to.equal(\"90\");\r",
+									"    pm.expect(body.output).to.equal(\"XC\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/romannumeral?query=90",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"romannumeral"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "90"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Basic Test - Convert 99",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response body matches\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    const body = pm.response.json();\r",
+									"\r",
+									"    pm.expect(body.input).to.equal(\"99\");\r",
+									"    pm.expect(body.output).to.equal(\"XCIX\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/romannumeral?query=99",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"romannumeral"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "99"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Basic Test - Convert 100",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response body matches\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    const body = pm.response.json();\r",
+									"\r",
+									"    pm.expect(body.input).to.equal(\"255\");\r",
+									"    pm.expect(body.output).to.equal(\"CCLV\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/romannumeral?query=255",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"romannumeral"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "255"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Basic Test - Convert 188",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response body matches\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    const body = pm.response.json();\r",
+									"\r",
+									"    pm.expect(body.input).to.equal(\"188\");\r",
+									"    pm.expect(body.output).to.equal(\"CLXXXVIII\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/romannumeral?query=188",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"romannumeral"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "188"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Basic Test - Convert 255",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response body matches\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    const body = pm.response.json();\r",
+									"\r",
+									"    pm.expect(body.input).to.equal(\"100\");\r",
+									"    pm.expect(body.output).to.equal(\"C\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/romannumeral?query=100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"romannumeral"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Negative Test Cases",
+			"item": [
+				{
+					"name": "Input is not a valid integer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Received errors for non integer input\", () => {\r",
+									"    pm.response.to.have.status(422);\r",
+									"    const body = pm.response.json();\r",
+									"\r",
+									"    pm.expect(body[0]).to.equal(\"Input must be a valid integer\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/romannumeral?query=ab",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"romannumeral"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "ab"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Input is below expected range",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Received input below expected range\", () => {\r",
+									"    pm.response.to.have.status(422);\r",
+									"    const body = pm.response.json();\r",
+									"\r",
+									"    pm.expect(body[0]).to.equal(\"Invalid input of '0' must be within the range 1-255\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/romannumeral?query=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"romannumeral"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Input is above expected range",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Received input above expected range\", () => {\r",
+									"    pm.response.to.have.status(422);\r",
+									"    const body = pm.response.json();\r",
+									"\r",
+									"    pm.expect(body[0]).to.equal(\"Invalid input of '256' must be within the range 1-255\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/romannumeral?query=256",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"romannumeral"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "256"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Both errors thrown",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Received both errors\", () => {\r",
+									"    pm.response.to.have.status(422);\r",
+									"    const body = pm.response.json();\r",
+									"\r",
+									"    pm.expect(body[0]).to.equal(\"Input must be a valid integer\");\r",
+									"    pm.expect(body[1]).to.equal(\"Invalid input of '0.35' must be within the range 1-255\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/romannumeral?query=0.35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"romannumeral"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "0.35"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
