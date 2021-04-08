@@ -7,6 +7,18 @@ An [express.js](https://expressjs.com/) application to request for a roman numer
 - https://mathworld.wolfram.com/RomanNumerals.html
 - https://en.wikipedia.org/wiki/Roman_numerals
 
+| Roman Numeral | Decimal Value |
+| ------------- | ------------- |
+| I             | 1             |
+| IV            | 4             |
+| V             | 5             |
+| IX            | 9             |
+| X             | 10            |
+| XL            | 40            |
+| L             | 50            |
+| XC            | 90            |
+| C             | 100           |
+
 ### Adjustments
 
 - Convert a number 1-255, inclusive, to its roman numeral equivalent
