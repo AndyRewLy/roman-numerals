@@ -397,8 +397,8 @@
 									"    pm.response.to.have.status(200);\r",
 									"    const body = pm.response.json();\r",
 									"\r",
-									"    pm.expect(body.input).to.equal(\"255\");\r",
-									"    pm.expect(body.output).to.equal(\"CCLV\");\r",
+									"    pm.expect(body.input).to.equal(\"100\");\r",
+									"    pm.expect(body.output).to.equal(\"C\");\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -409,7 +409,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/romannumeral?query=255",
+							"raw": "http://localhost:8080/romannumeral?query=100",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -421,7 +421,7 @@
 							"query": [
 								{
 									"key": "query",
-									"value": "255"
+									"value": "100"
 								}
 							]
 						}
@@ -481,8 +481,8 @@
 									"    pm.response.to.have.status(200);\r",
 									"    const body = pm.response.json();\r",
 									"\r",
-									"    pm.expect(body.input).to.equal(\"100\");\r",
-									"    pm.expect(body.output).to.equal(\"C\");\r",
+									"    pm.expect(body.input).to.equal(\"255\");\r",
+									"    pm.expect(body.output).to.equal(\"CCLV\");\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -493,7 +493,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/romannumeral?query=100",
+							"raw": "http://localhost:8080/romannumeral?query=255",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -505,7 +505,7 @@
 							"query": [
 								{
 									"key": "query",
-									"value": "100"
+									"value": "255"
 								}
 							]
 						}
