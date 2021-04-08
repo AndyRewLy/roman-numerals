@@ -1,7 +1,7 @@
 /**
  * romanNumeral - The character that represents the roman numeral
  * value - the decimal value of the roman numeral character
- * threshold - the threshold where the roman numeral can appear
+ * threshold - the threshold where the roman numeral can appear (related to subtractive notation with prefix)
  * prefix - the roman numeral to display when using subtractive notation
  */
 const romanNumeralConfig = [
