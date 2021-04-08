@@ -1,15 +1,17 @@
 /**
  * romanNumeral - The character that represents the roman numeral
- * value - the decimal value of the roman numeral character
- * threshold - the threshold where the roman numeral can appear (related to subtractive notation with prefix)
- * prefix - the roman numeral to display when using subtractive notation
+ * value - the decimal value of the roman numeral
  */
 const romanNumeralConfig = [
-  { romanNumeral: "C", value: 100, threshold: 90, prefix: "X" },
-  { romanNumeral: "L", value: 50, threshold: 40, prefix: "X" },
-  { romanNumeral: "X", value: 10, threshold: 9, prefix: "I" },
-  { romanNumeral: "V", value: 5, threshold: 4, prefix: "I" },
-  { romanNumeral: "I", value: 1, threshold: 1, prefix: "" },
+  { romanNumeral: "C", value: 100 },
+  { romanNumeral: "XC", value: 90 },
+  { romanNumeral: "L", value: 50 },
+  { romanNumeral: "XL", value: 40 },
+  { romanNumeral: "X", value: 10 },
+  { romanNumeral: "IX", value: 9 },
+  { romanNumeral: "V", value: 5 },
+  { romanNumeral: "IV", value: 4 },
+  { romanNumeral: "I", value: 1 },
 ];
 
 /**
@@ -32,32 +34,17 @@ const getRomanNumeral = (numInput) => {
 
 /**
  * Takes the input as well as the current configuration and returns the roman numeral portion.
- * i.e  Given the romanNumeral configuration corresponding to 'L' and an input of 39
- *    - returns XXXIX
  * @param {*} config
- * @returns the current resulting string of the opration as well as the curent input left to parse
+ * @returns the current resulting string of the operation as well as the curent input left to parse
  */
-const getRomanNumeralPortion = ({
-  romanNumeral,
-  input,
-  result,
-  value,
-  threshold,
-  prefix,
-}) => {
+const getRomanNumeralPortion = ({ romanNumeral, input, result, value }) => {
   let currentInput = input;
   let currentResult = result;
 
-  // While we can still divide the currentInput with the value, add it's corresponding romanNumeral
+  // While we can still divide the currentInput with the value, add its corresponding romanNumeral
   while (currentInput / value >= 1) {
     currentInput -= value;
     currentResult += romanNumeral;
-  }
-
-  // Determine if we need to add the subtractive notation for the current input
-  if (currentInput / threshold >= 1) {
-    currentInput -= threshold;
-    currentResult += prefix + romanNumeral;
   }
 
   return { result: currentResult, input: currentInput };
