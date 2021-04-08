@@ -84,11 +84,11 @@ npm run test
 
 Prerequisites:
 
-- Must have standalone postman app downloaded
+- Must have standalone Postman app downloaded [Download here](https://www.postman.com/downloads/)
 
 Instructions to Run
 
-1. Import the postman request collection `Roman_Numerals_Collection.postman_collection` into your postman app.
+1. Import the Postman request collection `Roman_Numerals_Collection.postman_collection` into your Postman app.
 2. Click on the collection
 3. Click the Run button
 4. Click the Run Roman Numerals Collection button
