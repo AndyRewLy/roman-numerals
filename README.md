@@ -72,11 +72,27 @@ Developed the roman numeral converter to be extensible, in the case that a requi
 
 ## Testing
 
-To run the test cases run the following command
+### Unit Tests
+
+Run the following command
 
 ```
 npm run test
 ```
+
+### API Tests
+
+Prerequisites:
+
+- Must have standalone postman app downloaded
+
+Instructions to Run
+
+1. Import the postman request collection `Roman_Numerals_Collection.postman_collection` into your postman app.
+2. Click on the collection
+3. Click the Run button
+4. Click the Run Roman Numerals Collection button
+5. Look at the output to verify tests that passed/failed.
 
 ## Project Structure
 
