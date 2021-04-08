@@ -1,5 +1,5 @@
 /**
- * Validates that the input is within the range from min to max
+ * Validates that the input is within the range from min to max, inclusive
  * @param {*} input input to validate against
  */
 const validateRange = (min, max) => (input) =>
