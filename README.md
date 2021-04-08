@@ -11,12 +11,22 @@ An [express.js](https://expressjs.com/) application to request for a roman numer
 
 - Convert a number 1-255, inclusive, to its roman numeral equivalent
 
+## Dependencies
+
+- [express.js](https://expressjs.com/) - minimal Node.js web app framework
+- [jest](https://jestjs.io/) - testing framework
+- [babel](https://babeljs.io/) - Javascript compiler to support ES6 syntax
+
 ## Setup
 
-Dependencies
+### Requirements
+
+The following technologies must be installed
 
 - node@10.21.0
 - npm@6.14.4
+
+### Running the project
 
 Run the following command to install the necessary dependencies for the project
 
