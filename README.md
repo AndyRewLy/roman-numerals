@@ -71,6 +71,7 @@ npm run test
 - `roman-numerals`
   - `server`
     - `bin`
+      - setup the express server
     - `routes`
       - contains the routes as well as rest APIs
     - `src`

@@ -1,5 +1,5 @@
 /**
- * romanNumeral - The character that represents the roman numeral
+ * romanNumeral - The character(s) that represents the roman numeral
  * value - the decimal value of the roman numeral
  */
 const romanNumeralConfig = [
